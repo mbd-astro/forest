@@ -7,9 +7,17 @@
 # Forest Library Creation
 # ----------------------------------------------------------------------------------------
 # Basic library name and alias
-add_library(forest-forest ./src/temp.cpp)
+add_library(forest-forest ./src/forest.cpp)
 add_library(Forest::forest ALIAS forest-forest)
 set_target_properties(forest-forest PROPERTIES OUTPUT_NAME forest)
+
+# Clang Tidy
+if (FOREST_ENABLE_CLANG_TIDY)
+    set_target_properties(
+        forest-forest 
+        PROPERTIES CXX_CLANG_TIDY "${CLANG_TIDY_COMMAND}"
+    )
+endif()
 
 # Include directories
 target_include_directories(
