@@ -2,3 +2,4 @@
 # File  : libs/CMakeLists.txt
 # Brief : Coordinating CMake file for libraries
 # ========================================================================================
+add_subdirectory(forest)
