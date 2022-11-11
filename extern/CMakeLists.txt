@@ -17,6 +17,19 @@ set(ABSL_BUILD_TESTING OFF CACHE BOOL "" FORCE)
 set(ABSL_PROPAGATE_CXX_STD ON CACHE BOOL "" FORCE)
 
 # ----------------------------------------------------------------------------------------
+# Boost
+# ----------------------------------------------------------------------------------------
+FetchContent_Declare(
+    boost
+    GIT_REPOSITORY https://github.com/scipy/boost-headers-only
+    GIT_TAG 3af99e6d566043072e95bc882d32c9c26f37e0ba
+)
+FetchContent_GetProperties(boost SOURCE_DIR FOREST_BOOST_SOURCE_DIR)
+add_library(forest-boost INTERFACE)
+add_library(Forest::boost ALIAS forest-boost)
+target_include_directories(forest-boost INTERFACE "${FOREST_BOOST_SOURCE_DIR}")
+
+# ----------------------------------------------------------------------------------------
 # Fmt
 # ----------------------------------------------------------------------------------------
 FetchContent_Declare(
@@ -53,6 +66,7 @@ set(PYBIND11_TEST OFF CACHE BOOL "" FORCE)
 # ----------------------------------------------------------------------------------------
 FetchContent_MakeAvailable(
     abseil
+    boost
     fmt
     googletest
     pybind11

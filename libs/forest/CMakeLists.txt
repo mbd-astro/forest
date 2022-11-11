@@ -27,6 +27,9 @@ target_include_directories(
     $<INSTALL_INTERFACE:include>
 )
 
+# Libraries
+target_link_libraries(forest-forest PRIVATE Forest::boost)
+
 # ----------------------------------------------------------------------------------------
 # Testing
 # ----------------------------------------------------------------------------------------
