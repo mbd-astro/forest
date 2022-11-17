@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/mbd-astro/forest">
-    <img src="docs/images/forest.png" alt="Logo" width="200">
+    <img src="docs/images/forest.png" alt="Logo" width="260">
   </a>
   <p align="center">
     <b>FOREST</b>: the <b>F</b>ast <b>OR</b>bit <b>E</b>nvironment <b>S</b>imulation <b>T</b>oolkit
