@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/mbd-astro/forest">
-    <img src="doc/images/forest.png" alt="Logo" width="200">
+    <img src="docs/images/forest.png" alt="Logo" width="200">
   </a>
   <p align="center">
     <b>FOREST</b>: the <b>F</b>ast <b>OR</b>bit <b>E</b>nvironment <b>S</b>imulation <b>T</b>oolkit
@@ -36,4 +36,4 @@ Forest[^1] is designed to be modular and easily-extendable. Functionality will i
 - Low-thrust propulsion
 
 
-[^1]: The name pays homage to [Forest Ray Moulton](https://en.wikipedia.org/wiki/Forest_Ray_Moulton)’s dual contributions to both the restricted three-body problem and to numerical integration methods.
+[^1]: Our name pays homage to [Forest Ray Moulton](https://en.wikipedia.org/wiki/Forest_Ray_Moulton)’s dual contributions to both the restricted three-body problem and to numerical integration methods.
