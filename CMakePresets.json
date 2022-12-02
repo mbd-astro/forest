@@ -1,0 +1,50 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 21,
+        "patch": 0
+    },
+    "configurePresets": [{
+            "name": "default",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "installDir": "${sourceDir}/out/install/${presetName}",
+            "cacheVariables": {
+                "CMAKE_EXPORT_COMPILE_COMMANDS": true
+            }
+        }, {
+            "name": "gcc",
+            "inherits": "default",
+            "generator": "Ninja Multi-Config",
+            "environment": {
+                "CC": "gcc",
+                "CXX": "g++"
+            }
+        },
+
+        {
+            "name": "clang",
+            "inherits": "default",
+            "generator": "Ninja Multi-Config",
+            "environment": {
+                "CC": "clang",
+                "CXX": "clang++"
+            }
+        }, {
+            "name": "msvc",
+            "inherits": "default",
+            "generator": "Visual Studio 17 2022"
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "gcc",
+            "configurePreset": "gcc"
+        },
+        {
+            "name": "clang",
+            "configurePreset": "clang"
+        }
+    ],
+    "testPresets": []
+}
